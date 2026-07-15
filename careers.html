@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers — MESSOLD</title>
+    
+    <!-- Premium Typography Inter & Plus Jakarta Sans via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ------------------------------------------------------------------
+           1. CORE DESIGN SYSTEM & REFRESH
+        ------------------------------------------------------------------ */
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-alt: #F7F7F7;
+            --bg-dark: #111111;
+            
+            --text-primary: #111111;
+            --text-secondary: #666666;
+            --text-light: #FAFAFA;
+            --text-muted: #888888;
+            
+            --border-color: #E6E6E6;
+            --border-dark: #2A2A2A;
+            
+            --font-sans: 'Inter', -apple-system, sans-serif;
+            --font-heading: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            
+            --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-smooth: all 0.6s var(--ease-premium);
+            --transition-fast: all 0.2s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 24px; }
+        }
+
+        /* Semantic Hierarchy & Elements */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .section-tag {
+            font-family: var(--font-sans);
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .section-tag.light {
+            color: var(--text-muted);
+        }
+
+        /* Divider Systems */
+        .divider {
+            height: 1px;
+            background-color: var(--border-color);
+            width: 100%;
+        }
+
+        /* Buttons Portfolio */
+        .btn-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            border: 1px solid transparent;
+            font-family: var(--font-sans);
+        }
+
+        .btn-dark {
+            background-color: var(--bg-dark);
+            color: var(--bg-primary);
+        }
+
+        .btn-dark:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+        .btn-light-outline {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--border-dark);
+        }
+
+        .btn-light-outline:hover {
+            border-color: var(--bg-primary);
+            background-color: rgba(255, 255, 255, 0.04);
+            transform: translateY(-1px);
+        }
+
+        /* Intersection Fade Reveal Engine */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s var(--ease-premium), transform 0.8s var(--ease-premium);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ------------------------------------------------------------------
+           2. PREMIUM REFINED DARK HERO SECTION
+        ------------------------------------------------------------------ */
+        .hero {
+            padding: 160px 0 100px 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .hero-layout {
+            max-width: 680px;
+        }
+
+        .hero .section-tag {
+            color: var(--text-muted);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            color: var(--text-light);
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 36px;
+            max-width: 580px;
+        }
+
+        .hero-ticker-wrap {
+            margin-top: 100px;
+        }
+
+        .hero .divider {
+            background-color: var(--border-dark);
+        }
+
+        .hero-ticker-text {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 120px 0 60px 0; }
+            .hero h1 { font-size: 32px; }
+            .hero-ticker-wrap { margin-top: 60px; }
+            .hero .btn-row .btn { width: 100%; }
+        }
+
+        /* ------------------------------------------------------------------
+           3. OPEN POSITIONS SECTION (LIST ARCHITECTURE)
+        ------------------------------------------------------------------ */
+        .jobs-section {
+            padding: 60px 0 120px 0;
+            background-color: var(--bg-primary);
+        }
+
+        .jobs-sticky-bar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-secondary);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .filter-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active {
+            background-color: var(--bg-alt);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        .jobs-count {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Handcrafted Horizontal Row Design */
+        .jobs-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-row {
+            display: grid;
+            grid-template-columns: 2.2fr 1.2fr 1fr 1fr 1.2fr 110px;
+            align-items: center;
+            padding: 28px 16px;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        /* Left Accent Interactive Microline */
+        .job-row::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--text-primary);
+            transform: scaleY(0);
+            transition: transform 0.4s var(--ease-premium);
+        }
+
+        .job-row:hover {
+            background-color: var(--bg-alt);
+            border-bottom-color: var(--text-primary);
+            transform: translateY(-2px);
+            padding-left: 24px;
+        }
+
+        .job-row:hover::before {
+            transform: scaleY(1);
+        }
+
+        .j-title {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .j-meta {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .j-action {
+            font-size: 13px;
+            font-weight: 500;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 4px;
+            transition: var(--transition-fast);
+            color: var(--text-primary);
+        }
+
+        .job-row:hover .j-action span {
+            transform: translateX(4px);
+        }
+
+        .job-row.hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 992px) {
+            .job-row {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 16px;
+                padding: 24px 16px;
+            }
+            .j-action {
+                grid-column: span 3;
+                justify-content: flex-start;
+                text-align: left;
+                margin-top: 8px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .job-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .j-action {
+                grid-column: span 1;
+            }
+            .jobs-sticky-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+
+        /* ------------------------------------------------------------------
+           4. WHY YOU'LL LOVE WORKING HERE (EDITORIAL TYPOGRAPHY SPLIT)
+        ------------------------------------------------------------------ */
+        .why-section {
+            padding: 140px 0;
+            background-color: var(--bg-alt);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .why-split {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+        }
+
+        .why-sticky-left h2 {
+            font-size: 32px;
+            position: sticky;
+            top: 140px;
+        }
+
+        .why-editorial-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 72px;
+        }
+
+        .why-block {
+            max-width: 580px;
+        }
+
+        .why-num {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .why-block h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 992px) {
+            .why-split {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .why-sticky-left h2 {
+                position: static;
+            }
+        }
+
+        /* ------------------------------------------------------------------
+           5. PERKS & BENEFITS (EQUAL HEIGHT BALANCED SYSTEM)
+        ------------------------------------------------------------------ */
+        .perks-section {
+            padding: 140px 0;
+            background-color: var(--bg-primary);
+        }
+
+        .perks-header {
+            margin-bottom: 80px;
+            max-width: 600px;
+        }
+
+        .perks-header h2 {
+            font-size: 32px;
+        }
+
+        .perks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+        }
+
+        .perk-card {
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: var(--transition-fast);
+            background-color: var(--bg-primary);
+        }
+
+        .perk-card:hover {
+            background-color: var(--bg-alt);
+        }
+
+        .perk-icon {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .perk-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-primary);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .perk-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .perk-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .perks-grid {
+                grid-template-columns: 1fr;
+            }
+            .perk-card {
+                padding: 32px 24px;
+            }
+        }
+
+        /* ------------------------------------------------------------------
+           6. HIRING PROCESS JOURNEY (COMPACT ENGINE)
+        ------------------------------------------------------------------ */
+        .process-section {
+            padding: 100px 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .process-section h2 {
+            font-size: 32px;
+            color: var(--bg-primary);
+            margin-bottom: 60px;
+        }
+
+        .journey-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .journey-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--border-dark);
+            z-index: 1;
+        }
+
+        .journey-step {
+            display: flex;
+            gap: 32px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 24px;
+            cursor: pointer;
+        }
+
+        .journey-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .journey-node {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .journey-node svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--text-muted);
+            fill: none;
+            stroke-width: 1.5;
+            transition: var(--transition-smooth);
+        }
+
+        .journey-content {
+            padding-top: 12px;
+            max-width: 640px;
+            border-bottom: 1px solid var(--border-dark);
+            padding-bottom: 16px;
+            flex-grow: 1;
+            transition: var(--transition-smooth);
+        }
+
+        .journey-content h3 {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .journey-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .journey-expanded-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s var(--ease-premium);
+            margin-top: 0;
+        }
+
+        .journey-expanded-details p {
+            padding-top: 8px;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 13px;
+        }
+
+        .journey-step:hover .journey-node {
+            border-color: var(--bg-primary);
+        }
+
+        .journey-step:hover .journey-node svg {
+            stroke: var(--bg-primary);
+        }
+
+        .journey-step.active .journey-expanded-details {
+            max-height: 80px;
+            margin-top: 2px;
+        }
+        
+        .journey-step.active .journey-content {
+            border-bottom-color: rgba(255, 255, 255, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .journey-step { gap: 16px; }
+            .journey-line { left: 16px; }
+            .journey-node { width: 32px; height: 32px; }
+            .journey-content { padding-top: 6px; }
+        }
+
+        /* ------------------------------------------------------------------
+           7. FREQUENTLY ASKED QUESTIONS (ACCORDION)
+        ------------------------------------------------------------------ */
+        .faq-section {
+            padding: 140px 0;
+            background-color: var(--bg-primary);
+        }
+
+        .faq-split {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 80px;
+        }
+
+        .faq-split h2 {
+            font-size: 32px;
+        }
+
+        .faq-stack {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-trigger {
+            width: 100%;
+            background: transparent;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 0;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .faq-trigger span {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: var(--transition-fast);
+        }
+
+        .faq-cross {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        .faq-cross::before, .faq-cross::after {
+            content: '';
+            position: absolute;
+            background-color: var(--text-primary);
+            transition: transform 0.4s var(--ease-premium);
+        }
+
+        .faq-cross::before { top: 6px; left: 0; width: 14px; height: 1px; }
+        .faq-cross::after { top: 0; left: 6px; width: 1px; height: 14px; }
+
+        .faq-row.active .faq-cross::after {
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+
+        .faq-row.active .faq-cross::before {
+            transform: rotate(180deg);
+        }
+
+        .faq-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s var(--ease-premium);
+        }
+
+        .faq-panel p {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            padding-bottom: 28px;
+            max-width: 620px;
+        }
+
+        @media (max-width: 992px) {
+            .faq-split {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        /* ------------------------------------------------------------------
+           8. CONFIDENT FINAL CTA SECTION
+        ------------------------------------------------------------------ */
+        .cta-section {
+            padding: 140px 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .cta-wrapper {
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            color: var(--bg-primary);
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .cta-section p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .cta-section .btn-row {
+            justify-content: center;
+        }
+
+        @media (max-width: 576px) {
+            .cta-section .btn-row .btn { width: 100%; }
+        }
+
+        /* ------------------------------------------------------------------
+           9. PREMIUM PRODUCT-STYLE DETAILS PORTAL (RE-ENGINEERED)
+        ------------------------------------------------------------------ */
+        .portal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(17, 17, 17, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s var(--ease-premium);
+            padding: 40px;
+        }
+
+        .portal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .portal-window {
+            background-color: var(--bg-primary);
+            width: 100%;
+            max-width: 980px;
+            height: 100%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: translateY(20px);
+            transition: transform 0.5s var(--ease-premium);
+        }
+
+        .portal-overlay.active .portal-window {
+            transform: translateY(0);
+        }
+
+        .portal-header {
+            padding: 32px 48px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-primary);
+        }
+
+        .portal-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .portal-close-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition-fast);
+        }
+
+        .portal-close-btn:hover {
+            background-color: var(--bg-alt);
+        }
+
+        .portal-close-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-primary);
+            stroke-width: 1.5;
+        }
+
+        .portal-layout {
+            flex: 1;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 68% 32%;
+        }
+
+        .portal-scrollable-body {
+            overflow-y: auto;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portal-block {
+            padding-bottom: 36px;
+            margin-bottom: 36px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .portal-block:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .portal-block h4 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 18px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .portal-block p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .portal-block ul {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .portal-block li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        /* Re-engineered Sticky Information Panel */
+        .portal-sidebar {
+            background-color: var(--bg-alt);
+            border-left: 1px solid var(--border-color);
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+        }
+
+        .portal-metadata-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .portal-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .portal-meta-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+
+        .portal-meta-value {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .portal-cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .portal-cta-group .btn {
+            width: 100%;
+        }
+
+        /* Comprehensive Responsive Specifications */
+        @media (max-width: 992px) {
+            .portal-overlay {
+                padding: 0;
+            }
+            .portal-window {
+                max-height: 100vh;
+                height: 100vh;
+                border-radius: 0;
+            }
+            .portal-layout {
+                grid-template-columns: 1fr;
+                overflow-y: auto;
+            }
+            .portal-sidebar {
+                border-left: none;
+                border-top: 1px solid var(--border-color);
+                padding: 40px 48px;
+                position: static;
+            }
+            .portal-scrollable-body {
+                overflow-y: visible;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portal-header {
+                padding: 24px;
+            }
+            .portal-scrollable-body {
+                padding: 32px 24px;
+            }
+            .portal-sidebar {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 2. DARK HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-layout">
+                <span class="section-tag">Careers at MESSOLD</span>
+                <h1>Build Shopify Stores.<br>Build Meaningful Careers.</h1>
+                <p>MESSOLD architects performance-obsessed Shopify environments and metrics-driven growth infrastructure for global premier commerce brands. We build deep products and cultivate sustainable talent.</p>
+                <div class="btn-row">
+                    <a href="#open-roles" class="btn btn-light-outline" style="background-color: var(--bg-primary); color: var(--bg-dark);">View Open Roles</a>
+                    <a href="#hiring-journey" class="btn btn-light-outline">Our Hiring Process</a>
+                </div>
+            </div>
+            
+            <div class="hero-ticker-wrap">
+                <div class="divider"></div>
+                <div style="padding: 24px 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                    <span class="hero-ticker-text">Remote-first</span>
+                    <span class="hero-ticker-text">•</span>
+                    <span class="hero-ticker-text">Flexible Hours</span>
+                    <span class="hero-ticker-text">•</span>
+                    <span class="hero-ticker-text">Learning Culture</span>
+                    <span class="hero-ticker-text">•</span>
+                    <span class="hero-ticker-text">Ownership from Day One</span>
+                </div>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. OPEN POSITIONS SECTION -->
+    <section class="jobs-section" id="open-roles">
+        <div class="container">
+            <div class="jobs-sticky-bar">
+                <div class="filter-group" id="filter-root">
+                    <!-- Filters dynamically mounted -->
+                </div>
+                <div class="jobs-count" id="jobs-count-display">Showing -- jobs</div>
+            </div>
+
+            <div class="jobs-list" id="jobs-list-root">
+                <!-- Rows dynamically mounted -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHY YOU'LL LOVE WORKING HERE SECTION -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-split">
+                <div class="why-sticky-left">
+                    <span class="section-tag">Operational Parameters</span>
+                    <h2>The Employee<br>Experience Architecture</h2>
+                </div>
+                
+                <div class="why-editorial-stack">
+                    <div class="why-block reveal">
+                        <span class="why-num">01 / IMPACT</span>
+                        <h3>Meaningful Ownership</h3>
+                        <p>We avoid isolated assemblies. At MESSOLD, engineers and growth architects own whole execution lifecycles, driving structures that explicitly map to premier storefront performance indicators.</p>
+                    </div>
+
+                    <div class="why-block reveal">
+                        <span class="why-num">02 / EDUCATION</span>
+                        <h3>Continuous Learning</h3>
+                        <p>Collaborate with specialists daily. We protect product review windows and fund experimentation pipelines to keep engineering metrics globally competitive.</p>
+                    </div>
+
+                    <div class="why-block reveal">
+                        <span class="why-num">03 / SUSTAINABILITY</span>
+                        <h3>Healthy Work-Life Balance</h3>
+                        <p>We discard hyper-urgency structures. True product refinement needs uninterrupted thought. We plan development in sustainable patterns to protect mental clarity.</p>
+                    </div>
+
+                    <div class="why-block reveal">
+                        <span class="why-num">04 / AUTONOMY</span>
+                        <h3>Remote Collaboration</h3>
+                        <p>Sync via clean, asynchronous documentation. Choose your base workspace location globally while staying linked through structural transparency portals.</p>
+                    </div>
+
+                    <div class="why-block reveal">
+                        <span class="why-num">05 / MERITOCRACY</span>
+                        <h3>Open Communication</h3>
+                        <p>Decisions match analytical facts, never hierarchical standing. If your architectural design runs faster and cleans dependency footprints, it wins standard setup priority.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PERKS & BENEFITS SECTION (RE-ENGINEERED UNIFORM GRID) -->
+    <section class="perks-section">
+        <div class="container">
+            <div class="perks-header">
+                <span class="section-tag">Ecosystem Specs</span>
+                <h2>Sustaining Creative Integrity</h2>
+            </div>
+
+            <div class="perks-grid">
+                <!-- Card 1 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Flexible Working Hours</h3>
+                    <p>Align production parameters flawlessly with your independent daily biological rhythm.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M20 12a8 8 0 1 0-16 0"/></svg>
+                    </div>
+                    <h3>Remote First</h3>
+                    <p>Zero spatial anchors. Build fluid high-conversion ecosystems from any place globally.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg>
+                    </div>
+                    <h3>Learning Budget</h3>
+                    <p>Annual financial allocation reserved for structured technical courses and development materials.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3>Performance Rewards</h3>
+                    <p>Direct infrastructure profit mapping linked explicitly to metrics optimization cycles.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3>Paid Leave</h3>
+                    <p>Mandated operational restorative windows structured intentionally to protect mental design focus.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Career Growth</h3>
+                    <p>Clean vertical scaling tracks engineered for fast-moving technical professionals.</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Mentorship Channels</h3>
+                    <p>Unimpeded diagnostic communication lines directly accessing seasoned brand technical leaders.</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <h3>Recognition Programs</h3>
+                    <p>Periodic engineering evaluation sessions celebrating structural milestone accomplishments.</p>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Modern Software & Tools</h3>
+                    <p>Complete workspace hardware setup allowance complemented by premier collaborative software licenses.</p>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="perk-card reveal">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>Wellness Support</h3>
+                    <p>Dedicated digital healthcare sub-budgets funding baseline physical fitness systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. HIRING PROCESS JOURNEY SECTION (COMPACT PASSTHROUGH) -->
+    <section class="process-section" id="hiring-journey">
+        <div class="container">
+            <span class="section-tag light">Pipeline Protocol</span>
+            <h2>Our Review Architecture</h2>
+
+            <div class="journey-container">
+                <div class="journey-line"></div>
+
+                <!-- Step 1 -->
+                <div class="journey-step reveal" data-step="1">
+                    <div class="journey-node">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <div class="journey-content">
+                        <h3>01 / Application Submission</h3>
+                        <p>Submit your profile alongside comprehensive documentation of architectural case studies or clear repository components.</p>
+                        <div class="journey-expanded-details">
+                            <p>We review layout mechanics, documentation architecture, and your approach to addressing layout optimization layers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="journey-step reveal" data-step="2">
+                    <div class="journey-node">
+                        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <div class="journey-content">
+                        <h3>02 / Technical Resume Review</h3>
+                        <p>Engineering leads parse code formats, theme customization workflows, or quantitative marketing sheets directly.</p>
+                        <div class="journey-expanded-details">
+                            <p>No generic screening filters. Real execution specialists map your background directly to active client assignments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="journey-step reveal" data-step="3">
+                    <div class="journey-node">
+                        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="journey-content">
+                        <h3>03 / Asynchronous HR Discussion</h3>
+                        <p>A brief operational dialogue covering compensation, geographic layout setup, and collaborative culture matching.</p>
+                        <div class="journey-expanded-details">
+                            <p>We discuss your optimal workflow patterns, communication preferences, and focus habits.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="journey-step reveal" data-step="4">
+                    <div class="journey-node">
+                        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <div class="journey-content">
+                        <h3>04 / Practical Assessment Round</h3>
+                        <p>A focused technical verification problem based on real agency projects—no abstract algorithms.</p>
+                        <div class="journey-expanded-details">
+                            <p>You'll analyze architecture limits, design custom Liquid setups, or optimize specific script structures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="journey-step reveal" data-step="5">
+                    <div class="journey-node">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="journey-content">
+                        <h3>05 / Final System Alignment</h3>
+                        <p>Review engineering guidelines with our design leads and primary brand engineers.</p>
+                        <div class="journey-expanded-details">
+                            <p>We finalize your role alignment, project ownership scopes, and primary tools integration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="journey-step reveal" data-step="6">
+                    <div class="journey-node">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="journey-content">
+                        <h3>06 / Active Offer 🎉</h3>
+                        <p>A structured proposal detailing hardware support, custom options, and your onboarding sequence.</p>
+                        <div class="journey-expanded-details">
+                            <p>We provision your gear, clear secure accounts, and integrate you cleanly into the team flow.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FREQUENTLY ASKED QUESTIONS SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-split">
+                <div>
+                    <span class="section-tag">Direct Context</span>
+                    <h2>Frequently<br>Asked Questions</h2>
+                </div>
+                
+                <div class="faq-stack">
+                    <div class="faq-row">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>How does the interview process work?</span>
+                            <span class="faq-cross"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>Our process flows systematically through portfolio review, functional screening, a real-world task scenario, and a final architecture conversation. We value documentation clarity and structured thinking over raw speed answers.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-row">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>How should I prepare?</span>
+                            <span class="faq-cross"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>Review your previous optimization work. Be prepared to explain how you troubleshoot performance issues, structure Liquid logic, or design reusable, system-wide design tokens.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-row">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>What questions are usually asked?</span>
+                            <span class="faq-cross"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>We focus on how you handle tech debt, structure modern assets, configure commerce hooks, and coordinate with async teams across different time zones.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-row">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>How long does feedback take?</span>
+                            <span class="faq-cross"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>We value candidates' time. Feedback at every stage is processed and delivered via email within 3 to 5 business days, along with detailed context from the engineering team.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-row">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>Can interviews be conducted remotely?</span>
+                            <span class="faq-cross"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p>Yes. The entire pipeline is remote-first and async-friendly. We use clear text logs, loom walk-through configurations, and structured video check-ins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <span class="section-tag light">Inbound Pipeline</span>
+                <h2>Ready to Build Something Meaningful?</h2>
+                <p>If your skillset spans unexpected boundaries outside our listed roles, get in touch anyway. We are always looking for exceptional talent.</p>
+                <div class="btn-row">
+                    <a href="#open-roles" class="btn btn-dark" style="background-color: var(--bg-primary); color: var(--text-primary);">Explore Open Roles</a>
+                    <a href="mailto:careers@messold.com" class="btn btn-light-outline">Send Your Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PREMIUM RE-ENGINEERED JOB DETAILS PORTAL (SPLIT DESIGN) -->
+    <div class="portal-overlay" id="portal-overlay" aria-hidden="true" role="dialog">
+        <div class="portal-window" id="portal-frame" tabindex="-1">
+            
+            <div class="portal-header">
+                <div class="portal-title">
+                    <h3 id="p-title">Role Title</h3>
+                </div>
+                <button class="portal-close-btn" id="portal-close" aria-label="Close details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+
+            <div class="portal-layout">
+                <!-- Independent Left Column Content Area -->
+                <div class="portal-scrollable-body">
+                    <div class="portal-block">
+                        <h4>About the Role</h4>
+                        <p id="p-about">Loading context description...</p>
+                    </div>
+                    
+                    <div class="portal-block">
+                        <h4>Responsibilities</h4>
+                        <ul id="p-responsibilities"></ul>
+                    </div>
+
+                    <div class="portal-block">
+                        <h4>Requirements</h4>
+                        <ul id="p-requirements"></ul>
+                    </div>
+
+                    <div class="portal-block">
+                        <h4>Preferred Skills</h4>
+                        <ul id="p-preferred"></ul>
+                    </div>
+
+                    <div class="portal-block">
+                        <h4>Hiring Process</h4>
+                        <p id="p-process" style="font-size:14px; color: var(--text-secondary); line-height: 1.6;">Application Screening &rarr; Technical Coding Scenario Verification &rarr; HR Core Architecture Calibration Alignment &rarr; Active Proposal Delivery Protocol Sequence.</p>
+                    </div>
+                </div>
+
+                <!-- Sticky Sidebar Right Information Panel -->
+                <div class="portal-sidebar">
+                    <div class="portal-metadata-grid">
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Department</span>
+                            <span class="portal-meta-value" id="s-dept">--</span>
+                        </div>
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Employment Type</span>
+                            <span class="portal-meta-value" id="s-type">--</span>
+                        </div>
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Experience</span>
+                            <span class="portal-meta-value" id="s-exp">--</span>
+                        </div>
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Location</span>
+                            <span class="portal-meta-value" id="s-loc">--</span>
+                        </div>
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Salary Range</span>
+                            <span class="portal-meta-value" id="s-sal">--</span>
+                        </div>
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Working Hours</span>
+                            <span class="portal-meta-value" id="s-hours">--</span>
+                        </div>
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Reporting To</span>
+                            <span class="portal-meta-value" id="s-reporting">--</span>
+                        </div>
+                        <div class="portal-meta-item">
+                            <span class="portal-meta-label">Application Deadline</span>
+                            <span class="portal-meta-value" id="s-deadline">--</span>
+                        </div>
+                    </div>
+
+                    <div class="portal-cta-group">
+                        <a href="#" class="btn btn-dark" id="p-apply-action">Apply Now</a>
+                        <button class="btn btn-outline" id="p-share-action">Share Job</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 10. EXPANDED DATA ECOSYSTEM & FUNCTIONAL ENGINE -->
+    <script>
+        // Centralized Database Expanded with 13 Highly Detailed Realistic Target Profiles
+        const jobsDatabase = [
+            {
+                id: "shopify-developer-intern",
+                title: "Shopify Developer Intern",
+                department: "Engineering",
+                employment: "Internship",
+                experience: "Freshers / Entry Level",
+                location: "Remote (Global)",
+                salary: "Paid Stipend Track",
+                hours: "Flexible Core Alignment",
+                reporting: "Senior Front-end Architect",
+                deadline: "August 28, 2026",
+                about: "Kickstart your development journey learning to assemble highly optimized ecommerce systems inside standard Liquid layout pipelines.",
+                responsibilities: [
+                    "Assist with formatting modular components using native Shopify template schemas.",
+                    "Optimize rendering speeds across experimental workspace variants.",
+                    "Troubleshoot interface responsiveness bugs across targeted device screens."
+                ],
+                requirements: [
+                    "Fundamental understanding of semantic HTML5, modern CSS3 layout rules, and standard modern JavaScript structures.",
+                    "Eagerness to study enterprise-grade digital architecture blueprints."
+                ],
+                preferred: [
+                    "Basic exposure to writing scripts inside Shopify theme structures.",
+                    "Familiarity with tracking versions inside git workflows."
+                ]
+            },
+            {
+                id: "shopify-developer",
+                title: "Shopify Developer",
+                department: "Engineering",
+                employment: "Full Time",
+                experience: "1-3 Years",
+                location: "Remote (Global)",
+                salary: "Competitive Growth Base",
+                hours: "Async Task-Based Blocks",
+                reporting: "Lead Platform Engineer",
+                deadline: "September 02, 2026",
+                about: "Take complete structural ownership of designing and modifying optimized themes for global market direct-to-consumer client platforms.",
+                responsibilities: [
+                    "Engineer responsive Shopify themes from production UI design specifications.",
+                    "Implement localized asset loading routines ensuring optimal file configurations.",
+                    "Coordinate logic hand-offs safely across active backend fulfillment webhooks."
+                ],
+                requirements: [
+                    "Deep knowledge of Shopify theme configurations, layout patterns, and Liquid architecture variables.",
+                    "Proven competence processing custom asset pipelines smoothly."
+                ],
+                preferred: [
+                    "Experience implementing third-party app installations cleanly without rendering bloat.",
+                    "Knowledge of modern responsive framework techniques."
+                ]
+            },
+            {
+                id: "full-stack-developer",
+                title: "Full Stack Developer",
+                department: "Engineering",
+                employment: "Full Time",
+                experience: "3+ Years",
+                location: "Remote (Europe/Asia)",
+                salary: "Premium Skill Range",
+                hours: "Flexible Schedule Strategy",
+                reporting: "Director of Engineering",
+                deadline: "September 10, 2026",
+                about: "Bridge data management requirements with presentation layers by architecting high-performance headless apps using Shopify API endpoints.",
+                responsibilities: [
+                    "Maintain secure API integrations between internal inventory hubs and public facades.",
+                    "Refine asynchronous database queries to maximize response efficiency metrics.",
+                    "Construct reusable custom app wrappers tracking localized enterprise rules."
+                ],
+                requirements: [
+                    "Demonstrated mastery of server environments combined with modern frontend client execution layers.",
+                    "Clean logic writing skills handling intensive multi-tenant data loops."
+                ],
+                preferred: [
+                    "Experience configuring custom apps on Shopify Partners infrastructure.",
+                    "Familiarity with deployment procedures inside edge-network environments."
+                ]
+            },
+            {
+                id: "frontend-developer",
+                title: "Frontend Developer",
+                department: "Engineering",
+                employment: "Full Time",
+                experience: "2-4 Years",
+                location: "Remote (Global)",
+                salary: "Market Standard Plus",
+                hours: "Flexible (Async Core)",
+                reporting: "Engineering Lead",
+                deadline: "August 30, 2026",
+                about: "Translate detailed layouts into interactive components while maintaining strict compliance with Core Web Vitals standard parameters.",
+                responsibilities: [
+                    "Build smooth client side rendering components using modern lightweight styling patterns.",
+                    "Perform strict optimization passes targeting image assets and script weights.",
+                    "Standardize structural semantic layouts to comply with globally recognized accessibility laws."
+                ],
+                requirements: [
+                    "Exceptional fluency processing raw JavaScript alongside structured layout systems.",
+                    "Deep comprehension of rendering lifecycle priorities inside client web engines."
+                ],
+                preferred: [
+                    "Familiarity interfacing frontend components cleanly with Shopify storefront frameworks.",
+                    "Experience creating extensible design systems."
+                ]
+            },
+            {
+                id: "backend-developer",
+                title: "Backend Developer",
+                department: "Engineering",
+                employment: "Full Time",
+                experience: "3+ Years",
+                location: "Remote (US/Europe)",
+                salary: "High Base Target",
+                hours: "Sync Alignment Blocks",
+                reporting: "Systems Infrastructure Architect",
+                deadline: "September 12, 2026",
+                about: "Design the core logic systems, secure transactional routing, and cloud infrastructure pipelines fueling enterprise store mechanics.",
+                responsibilities: [
+                    "Construct scalable event-driven functions responding to store transaction triggers.",
+                    "Secure endpoint connections dealing with private customer accounting records.",
+                    "Optimize data caching strategies to minimize global service latency spikes."
+                ],
+                requirements: [
+                    "Strong background architecting robust transactional environments handling complex data validation loops.",
+                    "Flawless database design logic and clean documentation habits."
+                ],
+                preferred: [
+                    "Familiarity navigating webhooks and checkout extensions.",
+                    "Experience working within serverless container architectures."
+                ]
+            },
+            {
+                id: "performance-marketing-executive",
+                title: "Performance Marketing Executive",
+                department: "Marketing",
+                employment: "Full Time",
+                experience: "2-3 Years",
+                location: "Remote (Asia Focus)",
+                salary: "Base + Conversion Bonuses",
+                hours: "Campaign Performance Windows",
+                reporting: "Head of Growth Strategy",
+                deadline: "September 18, 2026",
+                about: "Supervise allocation pathways and campaign strategies to drive conversion results for multi-million scale merchant portfolios.",
+                responsibilities: [
+                    "Oversee conversion scaling tactics across premier marketing networks.",
+                    "Build multi-variate test funnels evaluating landing layout variations systematically.",
+                    "Deliver structured attribution performance reports directly to core brand partners."
+                ],
+                requirements: [
+                    "Demonstrated historical competence driving direct-to-consumer advertising systems with clear positive outcomes.",
+                    "Analytical baseline processing data patterns carefully inside complex tables."
+                ],
+                preferred: [
+                    "Hands-on practice applying advanced tracking scripts to store purchase events.",
+                    "Deep knowledge of target audience segments."
+                ]
+            },
+            {
+                id: "performance-marketing-intern",
+                title: "Performance Marketing Intern",
+                department: "Marketing",
+                employment: "Internship",
+                experience: "Fresh Graduate Track",
+                location: "Remote (Global)",
+                salary: "Paid Standard Stipend",
+                hours: "Flexible Strategy Syncs",
+                reporting: "Senior Growth Manager",
+                deadline: "August 25, 2026",
+                about: "Learn the quantitative data metrics systems supporting customer acquisition and retention strategies in elite commerce channels.",
+                responsibilities: [
+                    "Perform quantitative baseline competitor tracking assessments across target niches.",
+                    "Assist with drafting performance copy adjustments matching targeted search search logs.",
+                    "Verify data accuracy parameters across multiple marketing reporting sheets."
+                ],
+                requirements: [
+                    "High baseline comfort handling analytics systems and basic financial calculation models.",
+                    "Excellent natural descriptive writing capability suited for digital media channels."
+                ],
+                preferred: [
+                    "Previous basic exposure running small-scale local online campaign assets.",
+                    "Certifications in major search analytics tools."
+                ]
+            },
+            {
+                id: "graphic-designer",
+                title: "Design Artisan / Graphic Specialist",
+                department: "Design",
+                employment: "Full Time",
+                experience: "2+ Years",
+                location: "Remote (Global)",
+                salary: "Competitive Creative Scale",
+                hours: "Task Output Driven",
+                reporting: "Creative Director",
+                deadline: "September 08, 2026",
+                about: "Craft beautiful visual layout components, lifestyle advertising vectors, and brand assets for premium digital storefront campaigns.",
+                responsibilities: [
+                    "Produce creative promotional art assets respecting specific partner typography rules.",
+                    "Format visual distribution templates minimizing required production iteration delays.",
+                    "Translate structural data guidelines into intuitive layout maps."
+                ],
+                requirements: [
+                    "Advanced mastery operating primary vector and vector layout software suites cleanly.",
+                    "Flawless intuitive awareness of white space balance, hierarchy, and typographic details."
+                ],
+                preferred: [
+                    "Basic awareness of file compression limits to ensure rapid site loading.",
+                    "Experience processing modern motion elements."
+                ]
+            },
+            {
+                id: "ui-ux-designer",
+                title: "UI/UX Product Designer",
+                department: "Design",
+                employment: "Full Time",
+                experience: "3+ Years",
+                location: "Remote (Global)",
+                salary: "Premium Experience Base",
+                hours: "Flexible Architecture Hours",
+                reporting: "Creative Director",
+                deadline: "September 05, 2026",
+                about: "We need a sophisticated designer to build interactive storefront components, clear grid architectures, and brand design guidelines that support high usability.",
+                responsibilities: [
+                    "Develop production-ready responsive layout prototypes using standard systems.",
+                    "Work with front-end engineers to ensure design specifications are met.",
+                    "Map clean user-testing variations to improve check-out experience metrics."
+                ],
+                requirements: [
+                    "An exceptional design portfolio displaying layout discipline, typography, and minimalist systems.",
+                    "Commitment to standard layouts and accessible structures."
+                ],
+                preferred: [
+                    "Familiarity with visual web transitions and interface prototyping techniques.",
+                    "Knowledge of performance-oriented design practices."
+                ]
+            },
+            {
+                id: "content-writer",
+                title: "Content Writer",
+                department: "Marketing",
+                employment: "Full Time",
+                experience: "1-3 Years",
+                location: "Remote (Global)",
+                salary: "Standard Market Allocation",
+                hours: "Asynchronous Flow",
+                reporting: "Communications Strategy Head",
+                deadline: "September 14, 2026",
+                about: "Shape clear, minimal narratives explaining technical capabilities and premium merchant case study transformations.",
+                responsibilities: [
+                    "Compose structured educational content tracking technical implementation parameters.",
+                    "Draft clean structural text lines intended for storefront layout applications.",
+                    "Refine written documentation templates used across customer care pipelines."
+                ],
+                requirements: [
+                    "Flawless written structural command displaying deep editing discipline.",
+                    "Ability to translate complex programmatic ideas into highly readable paragraphs."
+                ],
+                preferred: [
+                    "Basic knowledge matching search indexing performance habits.",
+                    "Background writing copy specifically for consumer software platforms."
+                ]
+            },
+            {
+                id: "video-editor",
+                title: "Video Editor",
+                department: "Design",
+                employment: "Full Time",
+                experience: "2+ Years",
+                location: "Remote (Global)",
+                salary: "Output Verified Scale",
+                hours: "Production Pipeline Cycles",
+                reporting: "Creative Lead",
+                deadline: "September 20, 2026",
+                about: "Assemble high-fidelity product demonstrations and direct-response marketing video clips engineered for maximum presentation performance.",
+                responsibilities: [
+                    "Cut raw digital camera captures into structured, impactful product sequences.",
+                    "Apply precise custom audio adjustments and clean typographic labels.",
+                    "Export optimal file formats prioritizing lightweight rendering parameters across target apps."
+                ],
+                requirements: [
+                    "High dexterity navigating non-linear timeline assembly software frameworks.",
+                    "Strong appreciation for processing pacing, style cues, and clean transitions."
+                ],
+                preferred: [
+                    "Competence producing basic custom animation sequences independently.",
+                    "Familiarity optimizing content loops for interactive mobile layouts."
+                ]
+            },
+            {
+                id: "hr-intern",
+                title: "HR Intern",
+                department: "Operations",
+                employment: "Internship",
+                experience: "Entry Level / Management Track",
+                location: "Remote (India Focus)",
+                salary: "Paid Learning Stipend",
+                hours: "Sync Alignment Blocks",
+                reporting: "Chief Operations Officer",
+                deadline: "August 24, 2026",
+                about: "Help support talent acquisition funnels and refine distributed workspace documentation files.",
+                responsibilities: [
+                    "Coordinate initial screening pipelines for engineering applicants.",
+                    "Update collaborative repository tracking active onboarding materials.",
+                    "Schedule sequence check-ins across different geographic timeline blocks."
+                ],
+                requirements: [
+                    "Exceptional verbal and written communication style characterized by prompt tracking discipline.",
+                    "High familiarity using standard spreadsheet tools and text repositories."
+                ],
+                preferred: [
+                    "Familiarity operating modern issue tracking tools like Linear or Notion.",
+                    "Academic focus in industrial relations or workforce management."
+                ]
+            },
+            {
+                id: "business-development-executive",
+                title: "Business Development Executive",
+                department: "Operations",
+                employment: "Full Time",
+                experience: "2-4 Years",
+                location: "Remote (Europe/Asia)",
+                salary: "Base + Enterprise Commission",
+                hours: "Partner Management Blocks",
+                reporting: "Managing Director",
+                deadline: "September 11, 2026",
+                about: "Identify high-value commerce brands requiring performance architecture optimization passes, converting opportunities into structural partnerships.",
+                responsibilities: [
+                    "Qualify enterprise-tier direct-to-consumer store candidates displaying structural layout gaps.",
+                    "Formulate architectural evaluation summaries proposing specific functional upgrades.",
+                    "Manage initial stakeholder communications smoothly up to implementation transitions."
+                ],
+                requirements: [
+                    "Proven competence handling communication cycles dealing directly with brand management directors.",
+                    "General vocabulary competency discussing digital platform variables comfortably."
+                ],
+                preferred: [
+                    "Direct historical experience working within a digital production agency setting.",
+                    "Familiarity with contract documentation parameters."
+                ]
+            }
+        ];
+
+        let activeCategory = "All";
+        let originalFocusedNode = null;
+
+        const filterRoot = document.getElementById("filter-root");
+        const jobsListRoot = document.getElementById("jobs-list-root");
+        const countDisplay = document.getElementById("jobs-count-display");
+        const portalOverlay = document.getElementById("portal-overlay");
+        const portalFrame = document.getElementById("portal-frame");
+        const portalClose = document.getElementById("portal-close");
+
+        // Initialization Pipeline
+        document.addEventListener("DOMContentLoaded", () => {
+            initFilters();
+            renderJobs();
+            initAccordions();
+            initRevealObserver();
+            initJourneyInteractions();
+            verifyDeepLinks();
+        });
+
+        // 1. Structural Filter Builder
+        function initFilters() {
+            const categories = ["All", ...new Set(jobsDatabase.map(j => j.department))];
+            filterRoot.innerHTML = categories.map(cat => `
+                <button class="filter-btn ${cat === activeCategory ? 'active' : ''}" data-cat="${cat}">
+                    ${cat}
+                </button>
+            `).join('');
+
+            filterRoot.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    activeCategory = e.target.getAttribute("data-cat");
+                    filterRoot.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                    e.target.classList.add("active");
+                    renderJobs();
+                });
+            });
+        }
+
+        // 2. Job Row Generator Layout Engine
+        function renderJobs() {
+            let activeCount = 0;
+            jobsListRoot.innerHTML = jobsDatabase.map(job => {
+                const match = activeCategory === "All" || job.department === activeCategory;
+                if(match) activeCount++;
+                return `
+                    <div class="job-row ${match ? '' : 'hidden'}" data-id="${job.id}" tabindex="0" role="button">
+                        <div class="j-title">${job.title}</div>
+                        <div class="j-meta">${job.department}</div>
+                        <div class="j-meta">${job.employment}</div>
+                        <div class="j-meta">${job.experience}</div>
+                        <div class="j-meta">${job.location}</div>
+                        <div class="j-action">
+                            View Role <span>&rarr;</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            countDisplay.innerText = `Showing ${activeCount} position${activeCount === 1 ? '' : 's'}`;
+            attachRowListeners();
+        }
+
+        function attachRowListeners() {
+            const rows = jobsListRoot.querySelectorAll(".job-row");
+            rows.forEach(row => {
+                const trigger = () => openPortalModal(row.getAttribute("data-id"), row);
+                row.addEventListener("click", trigger);
+                row.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); trigger(); } });
+            });
+        }
+
+        // 3. Dynamic Re-Engineered Split Portal System Engine
+        function openPortalModal(jobId, elementNode) {
+            originalFocusedNode = elementNode;
+            const blueprint = jobsDatabase.find(j => j.id === jobId);
+            if (!blueprint) return;
+
+            portalOverlay.classList.add("active");
+            portalOverlay.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+
+            // Map Left Column Content
+            document.getElementById("p-title").innerText = blueprint.title;
+            document.getElementById("p-about").innerText = blueprint.about;
+            document.getElementById("p-responsibilities").innerHTML = blueprint.responsibilities.map(r => `<li>${r}</li>`).join('');
+            document.getElementById("p-requirements").innerHTML = blueprint.requirements.map(r => `<li>${r}</li>`).join('');
+            document.getElementById("p-preferred").innerHTML = blueprint.preferred.map(p => `<li>${p}</li>`).join('');
+
+            // Map Right Sidebar Details
+            document.getElementById("s-dept").innerText = blueprint.department;
+            document.getElementById("s-type").innerText = blueprint.employment;
+            document.getElementById("s-exp").innerText = blueprint.experience;
+            document.getElementById("s-loc").innerText = blueprint.location;
+            document.getElementById("s-sal").innerText = blueprint.salary;
+            document.getElementById("s-hours").innerText = blueprint.hours;
+            document.getElementById("s-reporting").innerText = blueprint.reporting;
+            document.getElementById("s-deadline").innerText = blueprint.deadline;
+
+            // Wire Primary Actions
+            document.getElementById("p-apply-action").setAttribute("href", `mailto:careers@messold.com?subject=Application Entry: ${encodeURIComponent(blueprint.title)}`);
+            
+            const shareBtn = document.getElementById("p-share-action");
+            shareBtn.onclick = () => {
+                const deepPath = `${window.location.origin}${window.location.pathname}?role=${blueprint.id}`;
+                navigator.clipboard.writeText(deepPath);
+                const prevLabel = shareBtn.innerText;
+                shareBtn.innerText = "Link Copied ✓";
+                setTimeout(() => { shareBtn.innerText = prevLabel; }, 1800);
+            };
+
+            window.history.replaceState(null, '', `?role=${blueprint.id}`);
+            portalFrame.focus();
+            applyFocusTrap(portalFrame);
+        }
+
+        function closePortalModal() {
+            portalOverlay.classList.remove("active");
+            portalOverlay.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            window.history.replaceState(null, '', window.location.pathname);
+            if (originalFocusedNode) originalFocusedNode.focus();
+        }
+
+        portalClose.addEventListener("click", closePortalModal);
+        portalOverlay.addEventListener("click", (e) => { if (e.target === portalOverlay) closePortalModal(); });
+        window.addEventListener("keydown", (e) => { if (e.key === "Escape" && portalOverlay.classList.contains("active")) closePortalModal(); });
+
+        function applyFocusTrap(frame) {
+            const elementList = frame.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            const firstElement = elementList[0];
+            const lastElement = elementList[elementList.length - 1];
+            frame.addEventListener('keydown', function(e) {
+                if (e.key !== 'Tab') return;
+                if (e.shiftKey) { if (document.activeElement === firstElement) { lastElement.focus(); e.preventDefault(); } }
+                else { if (document.activeElement === lastElement) { firstElement.focus(); e.preventDefault(); } }
+            });
+        }
+
+        // 4. Smooth Accordion Handling
+        function initAccordions() {
+            document.querySelectorAll(".faq-trigger").forEach(trigger => {
+                trigger.addEventListener("click", () => {
+                    const row = trigger.parentElement;
+                    const panel = row.querySelector(".faq-panel");
+                    const state = trigger.getAttribute("aria-expanded") === "true";
+
+                    document.querySelectorAll(".faq-row").forEach(r => {
+                        r.classList.remove("active");
+                        r.querySelector(".faq-trigger").setAttribute("aria-expanded", "false");
+                        r.querySelector(".faq-panel").style.maxHeight = null;
+                    });
+
+                    if(!state) {
+                        row.classList.add("active");
+                        trigger.setAttribute("aria-expanded", "true");
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        }
+
+        // 5. Scroll Interaction Reveal Engine
+        function initRevealObserver() {
+            const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const obs = new IntersectionObserver(callback, { threshold: 0.05, rootMargin: "0px 0px -40px 0px" });
+            document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+        }
+
+        // 6. Journey Sequence Micro-Interaction
+        function initJourneyInteractions() {
+            const steps = document.querySelectorAll(".journey-step");
+            steps.forEach(step => {
+                step.addEventListener("click", () => {
+                    const state = step.classList.contains("active");
+                    steps.forEach(s => s.classList.remove("active"));
+                    if (!state) {
+                        step.classList.add("active");
+                    }
+                });
+            });
+            if(steps.length > 0) steps[0].classList.add("active");
+        }
+
+        // 7. Verify Inbound Query Dynamic Strings
+        function verifyDeepLinks() {
+            const queryStrings = new URLSearchParams(window.location.search);
+            const roleHash = queryStrings.get('role');
+            if (roleHash) {
+                setTimeout(() => {
+                    const matchedTarget = document.querySelector(`[data-id="${roleHash}"]`);
+                    if(matchedTarget) {
+                        matchedTarget.scrollIntoView({ behavior: "smooth", block: "center" });
+                        openPortalModal(roleHash, matchedTarget);
+                    }
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>
